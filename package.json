@@ -1,0 +1,42 @@
+{
+  "name": "js-typed-errors",
+  "version": "0.0.1",
+  "description": "A collection of typed errors for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "build": "browserify src/index.js -o dist/typed-errors.js -s TypedErrors",
+    "dist": "uglifyjs dist/typed-errors.js --compress --mangle -o dist/typed-errors.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonmarklar/js-typed-errors.git"
+  },
+  "keywords": [
+    "javascript",
+    "errors",
+    "typed",
+    "error"
+  ],
+  "author": "Simon Dobie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonmarklar/js-typed-errors/issues"
+  },
+  "homepage": "https://github.com/simonmarklar/js-typed-errors#readme",
+  "devDependencies": {
+    "brfs": "^1.4.0",
+    "chai": "^3.0.0",
+    "karma": "^0.12.37",
+    "karma-browserify": "^4.2.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-detect-browsers": "^2.0.1",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17"
+  }
+}
