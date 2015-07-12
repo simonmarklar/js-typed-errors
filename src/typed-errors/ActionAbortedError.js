@@ -1,10 +1,11 @@
+/* eslint-env node */
 'use strict';
 
 var makeErrorType = require('../make-error-type.js');
 
 function ActionAbortedError(msg){
-  this.msg = msg || "The action was aborted";
+  this.msg = msg || 'The action was aborted';
 }
 
 
-return makeErrorType( 'ActionAborted', ActionAbortedError );
+module.exports = makeErrorType( 'ActionAborted', ActionAbortedError );

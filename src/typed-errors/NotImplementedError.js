@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 'use strict';
 
 var makeErrorType = require('../make-error-type.js');
@@ -14,4 +16,4 @@ function NotImplementedError(msg){
   this.message = msg || 'Not Implemented';
 }
 
-return makeErrorType( 'NotImplemented', NotImplementedError );
+module.exports = makeErrorType( 'NotImplemented', NotImplementedError );
