@@ -6,10 +6,13 @@
 module.exports = {
   makeErrorType: require('./make-error-type.js'),
 
-  NotImplementedError: require('./typed-errors/NotImplementedError.js')
+  NotImplementedError: require('./typed-errors/NotImplementedError.js'),
+  NotFoundError: require('./typed-errors/NotFoundError.js'),
+
+  ActionAbortedError: require('./typed-errors/ActionAbortedError.js')
 };
 
-},{"./make-error-type.js":2,"./typed-errors/NotImplementedError.js":3}],2:[function(require,module,exports){
+},{"./make-error-type.js":2,"./typed-errors/ActionAbortedError.js":3,"./typed-errors/NotFoundError.js":4,"./typed-errors/NotImplementedError.js":5}],2:[function(require,module,exports){
 /*eslint-env node, browser  */
 
 function makeErrorType(name, ErrorConstructor){
@@ -31,6 +34,34 @@ function makeErrorType(name, ErrorConstructor){
 module.exports = makeErrorType;
 
 },{}],3:[function(require,module,exports){
+/* eslint-env node */
+'use strict';
+
+var makeErrorType = require('../make-error-type.js');
+
+function ActionAbortedError(msg){
+  this.msg = msg || 'The action was aborted';
+}
+
+
+module.exports = makeErrorType( 'ActionAborted', ActionAbortedError );
+
+},{"../make-error-type.js":2}],4:[function(require,module,exports){
+/* eslint-env node */
+'use strict';
+
+var makeErrorType = require('../make-error-type.js');
+
+function NotFoundError(msg){
+  this.msg = msg || 'The specified url was not found';
+}
+
+
+module.exports = makeErrorType( 'NotFound', NotFoundError );
+
+},{"../make-error-type.js":2}],5:[function(require,module,exports){
+/* eslint-env node */
+
 'use strict';
 
 var makeErrorType = require('../make-error-type.js');
@@ -47,6 +78,7 @@ function NotImplementedError(msg){
   this.message = msg || 'Not Implemented';
 }
 
-return makeErrorType( 'NotImplemented', NotImplementedError );
+module.exports = makeErrorType( 'NotImplemented', NotImplementedError );
+
 },{"../make-error-type.js":2}]},{},[1])(1)
 });
