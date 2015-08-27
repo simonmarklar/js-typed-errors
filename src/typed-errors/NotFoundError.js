@@ -10,7 +10,7 @@ var makeErrorType = require('../make-error-type.js');
  * @property {string} [name='NotFound'] - The name of the error
  */
 function NotFoundError(msg){
-  this.msg = msg || 'The specified url was not found';
+  this.message = msg || 'The specified url was not found';
 }
 
 

@@ -4,7 +4,7 @@
 var makeErrorType = require('../make-error-type.js');
 
 function ActionAbortedError(msg){
-  this.msg = msg || 'The action was aborted';
+  this.message = msg || 'The action was aborted';
 }
 
 
