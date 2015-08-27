@@ -1,11 +1,26 @@
-Typed Errors
-============
+#Typed Errors
+
 
 A Repo for the typed errors I use in my projects.
 
-Errors
-======
+## Building
 
-NotImplementedError
--------------------
+```
+npm run-script build
+bpm run-script minify
+```
+
+##Errors
+
+
+###NotImplementedError
+
 Something wasn't implemented.
+
+###ActionAborted
+
+An action was aborted
+
+###NotFound
+
+Something was not found.
